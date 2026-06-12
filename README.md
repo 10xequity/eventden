@@ -59,3 +59,37 @@ Static HTML/CSS/JS site (11 pages + 404). No build step. Shared `assets/css/styl
 8. CNAME file included (event-den.com apex) — confirm apex vs www, 301 the other in Cloudflare.
 
 **Recommended at launch:** Search Console verification + sitemap submit; Cloudflare Web Analytics (cookieless); favicon.svg included; 404.html included; run securityheaders.com after enabling Managed Transforms; Lighthouse mobile pass (target 90+); legal page counsel review.
+
+## Intake form — Google Form spec (build this; it auto-creates the linked Sheet)
+
+Build at forms.google.com → linked responses auto-populate a Google Sheet (Responses tab → green Sheets icon). Then paste the embed iframe (Send → `< >` → copy) into the marked slot in `inquiry.html`.
+
+**Questions (in order):**
+| # | Field | Type | Required | Notes |
+|---|---|---|---|---|
+| 1 | Full name | Short answer | ✔ | |
+| 2 | Email | Short answer | ✔ | Enable "Collect email addresses" + response receipts |
+| 3 | Phone | Short answer | ✔ | Validation: regex `[0-9()\-\s+]{10,}` |
+| 4 | Preferred contact method | Multiple choice | ✔ | Email / Phone / Text |
+| 5 | Event type | Dropdown | ✔ | Celebration (birthday, quinceañera, mitzvah, reunion) / Gala or Cultural Event / Wedding or Reception / Corporate / Tournament or Sports / Other |
+| 6 | Preferred event date | Date | ✔ | |
+| 7 | Backup date / flexibility | Short answer | – | |
+| 8 | Start & end time | Short answer | ✔ | Setup/cleanup are scoped in quote |
+| 9 | Estimated guest count | Dropdown | ✔ | <50 / 50–150 / 150–300 / 300–600 / 600–1,200 |
+| 10 | Space interest | Checkboxes | – | Court / Finished event area / Secondary open area / Contiguous main floor / Not sure |
+| 11 | Catering | Multiple choice | ✔ | Oda in-house / Outside caterer (fee applies) / None |
+| 12 | Bar service | Multiple choice | ✔ | Hosted bar / Cash bar / None |
+| 13 | Rentals needed | Checkboxes | – | Arch / Rolling bar / Lighting & drape / Tables-chairs-linens / Dance floor / Staging & A/V / Pickup rental for off-site event |
+| 14 | Internal events coordinator (add'l fee)? | Multiple choice | – | Yes / No / Tell me more |
+| 15 | Budget range | Dropdown | – | Optional — helps us scope; "Prefer not to say" option |
+| 16 | How did you hear about us? | Dropdown | – | Search / Social / Referral / FieldhouseUSA / Other |
+| 17 | Anything else? | Paragraph | – | |
+
+**Settings:** limit 1 response off; collect email on; notification rule in the linked Sheet (Tools → Notification settings → "on form submit, email"); add confirmation message with response-time promise ("we reply within one business day").
+
+**Why a Form, not a bare Sheet:** a static GitHub Pages site has no backend — a Sheet alone can't receive submissions. Google Forms is the collector; the Sheet is the database. (Alternative if you want the form styled on-page later: Formspree/Tally embedded, still no PII stored on-domain.)
+
+## Performance status (this build)
+- HTML ≤21 KB/page, CSS 22 KB, JS 5.8 KB (single shared files, no frameworks, no build step)
+- First hero image preloaded on index; fonts display=swap + preconnect; all below-fold images lazy-loaded
+- Remaining LCP cost is Unsplash hotlinks — biggest speed win is swapping to self-hosted WebP (<200 KB content / <400 KB hero) when real photos arrive

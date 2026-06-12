@@ -44,12 +44,12 @@ IMG = {
 OG_DEFAULT = u("photo-1519225421980-715cb0215aed", 1200)
 
 NAV = [
-  ("index.html", "Home"),
   ("celebrations.html", "Celebrations"),
   ("large-events.html", "Large Events"),
   ("corporate.html", "Corporate"),
   ("venue.html", "The Space"),
-  ("catering.html", "Catering & Bar"),
+  ("catering.html", "Catering"),
+  ("rentals-brokerage.html", "Rentals"),
   ("gallery.html", "Gallery"),
   ("faq.html", "FAQ"),
   ("contact.html", "Contact"),
@@ -311,7 +311,7 @@ def page_index():
         <li>In-house liquor license and turnkey bar programs</li>
         <li>On-site catering by Oda Bar &amp; Cafe, or bring your own caterer for a fee</li>
         <li>Internal events coordinator available for any program (additional fee)</li>
-        <li>Concierge brokerage to planners, rentals, and partner venues</li>
+        <li><a href="rentals-brokerage.html#resources">Event resources</a> — in-house services plus a brokered vendor network, one inquiry away</li>
       </ul>
       <a class="btn btn-ghost" href="inquiry.html">Request a custom quote</a>
     </div>
@@ -337,7 +337,7 @@ def page_index():
   </div>
 </section>
 
-<section>
+<section class="section-light">
   <div class="wrap">
     <div class="center reveal">
       <span class="eyebrow">Recent setups</span>
@@ -365,40 +365,40 @@ def page_index():
     </div>
     <!-- TODO: PLACEHOLDER TESTIMONIALS — replace with real, permissioned client quotes before launch. Do not publish fictional reviews. -->
     <div class="grid grid-3">
-      <article class="card t-card reveal">
-        <img src="{IMG["gala"]}" alt="Candlelit gala dinner tables at a Lunar New Year celebration" loading="lazy">
-        <div class="card-body"><span class="t-tag">Cultural · Lunar New Year Gala</span>
-          <p>"We needed seating for 600, a stage, and room for the lion dance — every hotel said no. Event-Den said 'which entrance should the dancers use?'"</p>
+      <article class="t-quote reveal" style="background-image:url('{IMG["gala"]}')">
+        <div class="t-veil"></div>
+        <div class="t-content"><span class="t-tag">Cultural · Lunar New Year Gala</span>
+          <p>We needed seating for 600, a stage, and room for the lion dance — every hotel said no. Event-Den asked which entrance the dancers should use.</p>
           <span class="t-name">Mei C. — Gala Committee Chair <span class="todo-flag">placeholder</span></span></div>
       </article>
-      <article class="card t-card reveal">
-        <img src="{IMG["crowd"]}" alt="Large community gathering celebrating together under event lighting" loading="lazy">
-        <div class="card-body"><span class="t-tag">Cultural · Community Festival</span>
-          <p>"Our Ethiopian community celebration brought generations together — traditional coffee ceremony, music, and dancing past midnight. The team treated our traditions with real care."</p>
+      <article class="t-quote reveal" style="background-image:url('{IMG["crowd"]}')">
+        <div class="t-veil"></div>
+        <div class="t-content"><span class="t-tag">Cultural · Community Festival</span>
+          <p>Our Ethiopian celebration brought generations together — coffee ceremony, music, dancing past midnight. The team treated our traditions with real care.</p>
           <span class="t-name">Selam T. — Festival Organizer <span class="todo-flag">placeholder</span></span></div>
       </article>
-      <article class="card t-card reveal">
-        <img src="{IMG["dance"]}" alt="Guests dancing at a quinceañera reception under warm lights" loading="lazy">
-        <div class="card-body"><span class="t-tag">Cultural · Quinceañera</span>
-          <p>"The waltz, the mariachis, 250 family members, and a dance floor that never emptied. My daughter felt like the night was built just for her — because it was."</p>
+      <article class="t-quote reveal" style="background-image:url('{IMG["dance"]}')">
+        <div class="t-veil"></div>
+        <div class="t-content"><span class="t-tag">Cultural · Quinceañera</span>
+          <p>The waltz, the mariachis, 250 family members, and a dance floor that never emptied. My daughter felt the night was built just for her — because it was.</p>
           <span class="t-name">The Ramirez Family <span class="todo-flag">placeholder</span></span></div>
       </article>
-      <article class="card t-card reveal">
-        <img src="{IMG["stage"]}" alt="Speaker addressing employees at a corporate all-hands event" loading="lazy">
-        <div class="card-body"><span class="t-tag">Corporate · Annual All-Hands</span>
-          <p>"Keynote in the morning, team volleyball after lunch, awards dinner with a hosted bar that night — one venue, one invoice, zero hotel markup."</p>
+      <article class="t-quote reveal" style="background-image:url('{IMG["stage"]}')">
+        <div class="t-veil"></div>
+        <div class="t-content"><span class="t-tag">Corporate · Annual All-Hands</span>
+          <p>Keynote in the morning, team volleyball after lunch, awards dinner with a hosted bar that night — one venue, one invoice.</p>
           <span class="t-name">Jordan P. — Operations Director <span class="todo-flag">placeholder</span></span></div>
       </article>
-      <article class="card t-card reveal">
-        <img src="{IMG["celebrate"]}" alt="Friends raising a toast at a milestone birthday party with gold balloons" loading="lazy">
-        <div class="card-body"><span class="t-tag">Celebration · 40th Birthday</span>
-          <p>"I wanted a party my whole circle could actually fit into. We had a DJ, a taco bar, and space for the kids to run — nobody wanted to leave."</p>
+      <article class="t-quote reveal" style="background-image:url('{IMG["celebrate"]}')">
+        <div class="t-veil"></div>
+        <div class="t-content"><span class="t-tag">Celebration · 40th Birthday</span>
+          <p>I wanted a party my whole circle could actually fit into. A DJ, a taco bar, and space for the kids to run — nobody wanted to leave.</p>
           <span class="t-name">Tasha W. — Birthday Host <span class="todo-flag">placeholder</span></span></div>
       </article>
-      <article class="card t-card reveal">
-        <img src="{IMG["tournament"]}" alt="Indoor court celebration for a volleyball team graduation party" loading="lazy">
-        <div class="card-body"><span class="t-tag">Team · Volleyball Graduation Party</span>
-          <p>"Our seniors got one last match on a real court, then walked straight into their graduation banquet next door. Parents are still talking about it."</p>
+      <article class="t-quote reveal" style="background-image:url('{IMG["tournament"]}')">
+        <div class="t-veil"></div>
+        <div class="t-content"><span class="t-tag">Team · Volleyball Graduation Party</span>
+          <p>Our seniors got one last match on a real court, then walked straight into their graduation banquet next door. Parents are still talking about it.</p>
           <span class="t-name">Coach Dana R. — Club Volleyball <span class="todo-flag">placeholder</span></span></div>
       </article>
     </div>
@@ -434,7 +434,7 @@ def page_celebrations():
   </div>
 </section>
 
-<section>
+<section class="section-light">
   <div class="wrap split">
     <div class="reveal">
       <span class="eyebrow">What it's for</span>
@@ -510,7 +510,7 @@ def page_large():
   </div>
 </section>
 
-<section>
+<section class="section-light">
   <div class="wrap split">
     <div class="reveal">
       <span class="eyebrow">What it's for</span>
@@ -579,7 +579,7 @@ def page_corporate():
   </div>
 </section>
 
-<section>
+<section class="section-light">
   <div class="wrap">
     <div class="center reveal"><span class="eyebrow">Formats</span><h2>Programs we host weekly</h2><hr class="gold-rule"></div>
     <div class="grid grid-3">
@@ -632,7 +632,7 @@ def page_catering():
   </div>
 </section>
 
-<section>
+<section class="section-light">
   <div class="wrap split">
     <div class="reveal">
       <span class="eyebrow">On-site kitchen</span>
@@ -681,11 +681,11 @@ def page_rentals():
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / Rentals &amp; Brokerage</nav>
     <span class="eyebrow">Rentals &amp; Brokerage</span>
     <h1>Everything your event needs — sourced, not stressed</h1>
-    <p class="lede" style="max-width:58ch;">Wedding &amp; event equipment rental in-house, plus a concierge brokerage that connects you to planners, rental companies, and partner venues across the metro.</p>
+    <p class="lede" style="max-width:58ch;">In-house wedding &amp; event rentals — on-site or pickup — plus an event-resource network of vendors we host or broker, from planners to partner venues.</p>
   </div>
 </section>
 
-<section>
+<section class="section-light">
   <div class="wrap split">
     <div class="reveal">
       <span class="eyebrow">Equipment rental</span>
@@ -700,6 +700,38 @@ def page_rentals():
       <p>Renting where you host means one delivery, one invoice, and no truck-scheduling roulette.</p>
     </div>
     <div class="split-img reveal"><img src="{IMG["wedding"]}" alt="Decorated wedding ceremony arch and seating" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="section-wood">
+  <div class="wrap">
+    <div class="center reveal"><span class="eyebrow">Wedding rental catalog</span><h2>Rent it here — use it here, or take it with you</h2><hr class="gold-rule">
+    <p style="max-width:66ch;margin:0 auto;">Our specialty wedding and event pieces are available for your event on-site — or for <strong>pickup rental</strong> at off-site venues. Reserve through the inquiry form.</p></div>
+    <div class="grid grid-3">
+      <article class="card reveal"><img src="{IMG["wedding"]}" alt="Decorated ceremony arch with florals" loading="lazy"><div class="card-body"><h3>Ceremony Arches</h3><p>Round, hexagon, and classic frames ready for florals and draping — the photo backdrop of the day.</p></div></article>
+      <article class="card reveal"><img src="{IMG["bar"]}" alt="Rolling bar cart set for cocktail service" loading="lazy"><div class="card-body"><h3>Rolling Bars</h3><p>Mobile bar carts that bring cocktail hour anywhere on the floor — or to your backyard reception.</p></div></article>
+      <article class="card reveal"><img src="{IMG["lights"]}" alt="String lights and uplighting at an evening event" loading="lazy"><div class="card-body"><h3>Lighting &amp; Drape</h3><p>String lights, uplights, pipe-and-drape, and backdrop kits that turn any room romantic.</p></div></article>
+      <article class="card reveal"><img src="{IMG["hero2"]}" alt="Banquet tables with linens and place settings" loading="lazy"><div class="card-body"><h3>Tables, Chairs &amp; Linens</h3><p>Banquet rounds, cocktail talls, and linens in event-ready condition, by the piece or by the room.</p></div></article>
+      <article class="card reveal"><img src="{IMG["dance"]}" alt="Guests on a dance floor at a reception" loading="lazy"><div class="card-body"><h3>Dance Floor Sections</h3><p>Modular flooring that scales from first-dance intimate to full-floor party.</p></div></article>
+      <article class="card reveal"><img src="{IMG["stage"]}" alt="Stage and A/V setup for a program" loading="lazy"><div class="card-body"><h3>Staging &amp; Basic A/V</h3><p>Risers, podiums, and essential sound — larger production sourced through our network.</p></div></article>
+    </div>
+    <p class="center" style="margin-top:2rem;font-size:.9rem;"><span class="todo-flag">TODO: confirm rental inventory list, pickup terms &amp; deposit policy</span></p>
+  </div>
+</section>
+
+<section class="section-light" id="resources">
+  <div class="wrap">
+    <div class="center reveal"><span class="eyebrow">Event resources</span><h2>Hosted by us, or brokered through us</h2><hr class="gold-rule">
+    <p style="max-width:66ch;margin:0 auto;">One inquiry reaches our whole network — in-house services we deliver ourselves, and trusted vendors we connect you with directly.</p></div>
+    <div class="grid grid-3">
+      <article class="card res-card reveal"><div class="card-body"><span class="res-chip">In-House</span><h3>Catering &amp; Bar</h3><p>Oda Bar &amp; Cafe menus and turnkey licensed bar programs, delivered by our own team.</p><a class="card-link" href="catering.html">Catering &amp; bar</a></div></article>
+      <article class="card res-card reveal"><div class="card-body"><span class="res-chip">In-House</span><h3>Events Coordinator</h3><p>Our internal coordinator runs timelines, vendors, and day-of logistics for any program — available at an additional fee.</p><a class="card-link" href="inquiry.html">Add coordination</a></div></article>
+      <article class="card res-card reveal"><div class="card-body"><span class="res-chip">In-House</span><h3>Equipment Rental</h3><p>The wedding and event catalog above — on-site or pickup.</p><a class="card-link" href="inquiry.html">Reserve pieces</a></div></article>
+      <article class="card res-card reveal"><div class="card-body"><span class="res-chip">Brokered</span><h3>Planners &amp; Designers</h3><p>Full wedding and event planning referred to trusted partner planners who know our floor.</p><a class="card-link" href="inquiry.html">Request an intro</a></div></article>
+      <article class="card res-card reveal"><div class="card-body"><span class="res-chip">Brokered</span><h3>Entertainment, A/V &amp; Photo</h3><p>DJs, live music, production, photographers, and videographers from our vendor network.</p><a class="card-link" href="inquiry.html">Request an intro</a></div></article>
+      <article class="card res-card reveal"><div class="card-body"><span class="res-chip">Brokered</span><h3>Florals, Décor &amp; Partner Venues</h3><p>Specialty décor, florists, rental companies — and other venues when ours isn't the fit.</p><a class="card-link" href="inquiry.html">Request an intro</a></div></article>
+    </div>
+    <p class="center" style="margin-top:2rem;font-size:.85rem;">Brokered vendors and venues are independent businesses — introductions we facilitate, not services we guarantee.</p>
   </div>
 </section>
 
@@ -739,7 +771,7 @@ def page_venue():
   </div>
 </section>
 
-<section>
+<section class="section-light">
   <div class="wrap split">
     <div class="reveal">
       <span class="eyebrow">The finished event area</span>
@@ -1098,7 +1130,7 @@ def page_inquiry():
     <p class="lede" style="max-width:58ch;">Tell us the occasion, the date, and the guest count. We typically respond within one business day with availability and an itemized starting quote.</p>
   </div>
 </section>
-<section>
+<section class="section-light">
   <div class="wrap" style="max-width:880px;">
     <div class="card reveal"><div class="card-body" style="text-align:center;padding:60px 30px;">
       <h3>Inquiry form</h3>
@@ -1133,7 +1165,7 @@ def page_contact():
     <h1>Find us, call us, tour the floor</h1>
   </div>
 </section>
-<section>
+<section class="section-light">
   <div class="wrap split">
     <div class="reveal">
       <h2>Event-Den · Event Denver</h2>
@@ -1172,7 +1204,7 @@ def page_legal():
     <p class="lede"><span class="todo-flag">Boilerplate pending counsel review</span></p>
   </div>
 </section>
-<section>
+<section class="section-light">
   <div class="wrap" style="max-width:840px;">
     <h2 id="privacy">Privacy Policy</h2>
     <hr class="gold-rule">
@@ -1278,7 +1310,11 @@ PAGES["faq.html"] = page_faq
 # ============================================================ BUILD ALL
 if __name__ == "__main__":
     for fname, builder in PAGES.items():
-        write(fname, builder())
+        html = builder()
+        if fname == "index.html":
+            html = html.replace('<link rel="icon"',
+                f'<link rel="preload" as="image" href="{IMG["hero1"]}">\n<link rel="icon"')
+        write(fname, html)
 
     # sitemap.xml
     urls = "\n".join(
