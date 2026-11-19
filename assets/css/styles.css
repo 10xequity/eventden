@@ -289,12 +289,6 @@ th{font-family:var(--ff-display);font-size:1.05rem;color:var(--gold-lt);font-wei
 .breadcrumbs{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-dim);margin-bottom:1.2rem;}
 .breadcrumbs a{color:var(--gold);}
 
-/* ---------- TODO flags ---------- */
-.todo-flag{
-  display:inline-block;background:rgba(75,46,107,.4);border:1px dashed var(--gold);
-  color:var(--gold-lt);font-size:.78rem;padding:.15rem .6rem;border-radius:4px;letter-spacing:.06em;
-}
-
 /* ---------- Lightbox ---------- */
 .lightbox{
   position:fixed;inset:0;z-index:200;background:rgba(10,8,7,.94);
@@ -340,7 +334,6 @@ th{font-family:var(--ff-display);font-size:1.05rem;color:var(--gold-lt);font-wei
 .section-light th,.section-light td{border-bottom-color:rgba(122,92,62,.3);}
 .section-light details{background:#fffdf8;border-color:rgba(122,92,62,.35);}
 .section-light summary::after{color:#b08b3e;}
-.section-light .todo-flag{background:rgba(75,46,107,.12);color:#5a3d12;border-color:#b08b3e;}
 
 /* ---------- Champagne pop (hero interaction) ---------- */
 #confetti-canvas{position:absolute;inset:0;z-index:3;pointer-events:none;}

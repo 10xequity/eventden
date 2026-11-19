@@ -1,7 +1,7 @@
 # Event-Den — event-den.com
 
 Static HTML/CSS/JS site (11 pages + 404). No build step. Shared `assets/css/styles.css` + `assets/js/main.js`.
-`build.py` is the generator used to produce the pages — you can delete it or keep it for regenerating; the HTML files are the deliverable.
+The HTML pages are edited directly; there is no build step.
 
 ## Deploy: GitHub Pages + Cloudflare
 
