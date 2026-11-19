@@ -43,19 +43,33 @@
     lb.className = "lightbox";
     lb.setAttribute("role", "dialog");
     lb.setAttribute("aria-label", "Enlarged gallery image");
+    lb.setAttribute("aria-modal", "true");
     lb.innerHTML = '<button type="button" aria-label="Close image">✕</button><img alt="">';
     document.body.appendChild(lb);
     var lbImg = lb.querySelector("img");
-    var close = function () { lb.classList.remove("open"); };
-    lb.querySelector("button").addEventListener("click", close);
+    var closeBtn = lb.querySelector("button");
+    var opener = null;
+    var close = function () {
+      if (!lb.classList.contains("open")) return;
+      lb.classList.remove("open");
+      if (opener) opener.focus();
+    };
+    closeBtn.addEventListener("click", close);
     lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    document.addEventListener("keydown", function (e) {
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      /* The close button is the dialog's only focusable control, so trapping Tab means keeping focus on it */
+      if (e.key === "Tab") { e.preventDefault(); closeBtn.focus(); }
+    });
     galleryImgs.forEach(function (img) {
       img.setAttribute("tabindex", "0");
       var open = function () {
+        opener = img;
         lbImg.src = img.src.replace(/w=\d+/, "w=1600");
         lbImg.alt = img.alt;
         lb.classList.add("open");
+        closeBtn.focus();
       };
       img.addEventListener("click", open);
       img.addEventListener("keydown", function (e) { if (e.key === "Enter") open(); });
@@ -83,6 +97,9 @@
   var COLORS = ["#c9a14e", "#e0c285", "#7a4fb0", "#a98ad1", "#f3ecdf"];
   var particles = [], energy = 0, popped = false, lastX = null, lastY = null, raf = null;
   var MAX = 900;
+  /* Touch screens can't "move the mouse", so tell them to tap instead */
+  var HINT = window.matchMedia("(hover: none)").matches ? "tap to pop" : "move your mouse · pop the bottle";
+  if (hint) hint.textContent = HINT;
 
   function size() { canvas.width = hero.clientWidth; canvas.height = hero.clientHeight; }
   size();
@@ -120,7 +137,7 @@
     popped = false; energy = 0;
     stage.classList.remove("popped");
     setProgress(0);
-    if (hint) hint.textContent = "move your mouse \u00b7 pop the bottle";
+    if (hint) hint.textContent = HINT;
   }
 
   function loop() {
