@@ -75,7 +75,7 @@ Build at forms.google.com → linked responses auto-populate a Google Sheet (Res
 | 6 | Preferred event date | Date | ✔ | |
 | 7 | Backup date / flexibility | Short answer | – | |
 | 8 | Start & end time | Short answer | ✔ | Setup/cleanup are scoped in quote |
-| 9 | Estimated guest count | Dropdown | ✔ | <50 / 50–150 / 150–300 / 300–600 / 600–1,200 |
+| 9 | Estimated guest count | Dropdown | ✔ | <50 / 50–150 / 150–300 / 300–600 / 600–600 |
 | 10 | Space interest | Checkboxes | – | Court / Finished event area / Secondary open area / Contiguous main floor / Not sure |
 | 11 | Catering | Multiple choice | ✔ | Oda in-house / Outside caterer (fee applies) / None |
 | 12 | Bar service | Multiple choice | ✔ | Hosted bar / Cash bar / None |
