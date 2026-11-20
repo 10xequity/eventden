@@ -18,7 +18,7 @@ The HTML pages are edited directly; there is no build step.
 
 ## Open items (TODO flags are visible in-page and in comments)
 
-1. Bar/café name — "Oda Bar & Cafe" vs "Oda Up" — VERIFY before launch.
+1. Bar/café name — "Oda Up" vs "Oda Up" — VERIFY before launch.
 2. Real phone (placeholder must not ship).
 3. Public email inbox.
 4. Real social URLs or remove footer mention.
@@ -52,7 +52,7 @@ The HTML pages are edited directly; there is no build step.
 1. Phone & email — visible TODO badges ship on contact/footer/inquiry.
 2. Google Form URL → paste into inquiry.html (commented slot ready).
 3. **Testimonials are PLACEHOLDERS (fictional).** Publishing invented reviews violates FTC endorsement rules — replace all 6 with real, permissioned client quotes (or remove the section) before launch.
-4. Verify "Oda Bar & Cafe" vs "Oda Up".
+4. Verify "Oda Up" vs "Oda Up".
 5. Champagne hero images are Unsplash placeholders — verify both load (graceful-hide fallback included) and replace with owned bottle photography.
 6. Court count + finished-area details on venue table.
 7. Social links: add real or delete footer mention.
